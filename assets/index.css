@@ -1,0 +1,53 @@
+.flip-card {
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.flip-card:hover {
+  transform: translateY(-5px);
+}
+.flip-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+.flip-front,
+.flip-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+.category-btn.active {
+  background-color: #0284c7;
+  color: white;
+}
+.keterangan {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Additional styles for better appearance */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.flip-front {
+  background-color: white;
+}
+.flip-back {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+}

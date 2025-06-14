@@ -1,0 +1,100 @@
+{
+  "flashcardData": [
+    {
+      "id": 1,
+      "category": "luas",
+      "name": "Persegi",
+      "formula": "L = s × s",
+      "description": "s = panjang sisi",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Square_-_black_simple.svg/800px-Square_-_black_simple.svg.png"
+    },
+    {
+      "id": 2,
+      "category": "keliling",
+      "name": "Persegi",
+      "formula": "K = 4 × s",
+      "description": "s = panjang sisi",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Square_-_black_simple.svg/800px-Square_-_black_simple.svg.png"
+    },
+    {
+      "id": 3,
+      "category": "luas",
+      "name": "Persegi Panjang",
+      "formula": "L = p × l",
+      "description": "p = panjang, l = lebar",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rectangle_-_black_simple.svg/1024px-Rectangle_-_black_simple.svg.png"
+    },
+    {
+      "id": 4,
+      "category": "keliling",
+      "name": "Persegi Panjang",
+      "formula": "K = 2 × (p + l)",
+      "description": "p = panjang, l = lebar",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rectangle_-_black_simple.svg/1024px-Rectangle_-_black_simple.svg.png"
+    },
+    {
+      "id": 5,
+      "category": "luas",
+      "name": "Segitiga",
+      "formula": "L = ½ × a × t",
+      "description": "a = alas, t = tinggi",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Triangle-black.svg/1024px-Triangle-black.svg.png"
+    },
+    {
+      "id": 6,
+      "category": "luas",
+      "name": "Lingkaran",
+      "formula": "L = π × r²",
+      "description": "π = 3.14, r = jari-jari",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Circle-black.svg/1024px-Circle-black.svg.png"
+    },
+    {
+      "id": 7,
+      "category": "keliling",
+      "name": "Lingkaran",
+      "formula": "K = 2 × π × r",
+      "description": "π = 3.14, r = jari-jari",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Circle-black.svg/1024px-Circle-black.svg.png"
+    },
+    {
+      "id": 8,
+      "category": "volume",
+      "name": "Kubus",
+      "formula": "V = s × s × s",
+      "description": "s = panjang sisi",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Cube.svg/1024px-Cube.svg.png"
+    },
+    {
+      "id": 9,
+      "category": "luas-permukaan",
+      "name": "Kubus",
+      "formula": "LP = 6 × s²",
+      "description": "s = panjang sisi",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Cube.svg/1024px-Cube.svg.png"
+    },
+    {
+      "id": 10,
+      "category": "volume",
+      "name": "Balok",
+      "formula": "V = p × l × t",
+      "description": "p = panjang, l = lebar, t = tinggi",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Cuboid.svg/1024px-Cuboid.svg.png"
+    },
+    {
+      "id": 11,
+      "category": "luas-permukaan",
+      "name": "Balok",
+      "formula": "LP = 2 × (p.l + p.t + l.t)",
+      "description": "p = panjang, l = lebar, t = tinggi",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Cuboid.svg/1024px-Cuboid.svg.png"
+    },
+    {
+      "id": 12,
+      "category": "volume",
+      "name": "Tabung",
+      "formula": "V = π × r² × t",
+      "description": "π = 3.14, r = jari-jari, t = tinggi",
+      "frontImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Simple_cylinder.svg/1024px-Simple_cylinder.svg.png"
+    }
+  ]
+}
