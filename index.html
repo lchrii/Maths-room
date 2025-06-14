@@ -1,92 +1,139 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maths-Room - Flashcard</title>
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="./assets/index.css">
-  
-  <!-- CDN Links -->
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  
-  <!-- SweetAlert2 -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
-  <!-- GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-sky-600 to-blue-500 text-white py-5 shadow-lg">
-    <div class="container mx-auto text-center px-4">
-      <h1 class="text-3xl md:text-4xl font-bold flex items-center justify-center gap-3">
-        <i class="fas fa-calculator"></i> Maths-Room
-      </h1>
-      <p class="text-sm mt-2 max-w-2xl mx-auto">
-        Belajar Rumus Matematika dengan Flashcard Interaktif - Klik pada kartu untuk melihat rumus
-      </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maths-Room - Flashcard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/index.css" />
+
+    <!-- CDN Links -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
+    <!-- Header -->
+    <header
+      class="bg-gradient-to-r from-sky-600 to-blue-500 text-white py-5 shadow-lg"
+    >
+      <div class="container mx-auto text-center px-4">
+        <h1
+          class="text-3xl md:text-4xl font-bold flex items-center justify-center gap-3"
+        >
+          <i class="fas fa-calculator"></i> Maths-Room
+        </h1>
+        <p class="text-sm mt-2 max-w-2xl mx-auto">
+          Belajar Rumus Matematika dengan Flashcard Interaktif - Klik pada kartu
+          untuk melihat rumus
+        </p>
+      </div>
+    </header>
+
+    <!-- Kategori Rumus -->
+    <div class="flex flex-wrap justify-center gap-3 mb-8 mt-6 px-4">
+      <button
+        onclick="filterCategory('all')"
+        id="btn-all"
+        class="category-btn active bg-white shadow px-5 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-100 transition font-medium"
+      >
+        <i class="fas fa-layer-group mr-2"></i>Semua
+      </button>
+      <button
+        onclick="filterCategory('keliling')"
+        id="btn-keliling"
+        class="category-btn bg-white shadow px-5 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-100 transition font-medium"
+      >
+        <i class="fas fa-ruler-combined mr-2"></i>Keliling
+      </button>
+      <button
+        onclick="filterCategory('luas')"
+        id="btn-luas"
+        class="category-btn bg-white shadow px-5 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-100 transition font-medium"
+      >
+        <i class="fas fa-border-all mr-2"></i>Luas
+      </button>
+      <button
+        onclick="filterCategory('volume')"
+        id="btn-volume"
+        class="category-btn bg-white shadow px-5 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-100 transition font-medium"
+      >
+        <i class="fas fa-cube mr-2"></i>Volume
+      </button>
+      <button
+        onclick="filterCategory('luas-permukaan')"
+        id="btn-luas-permukaan"
+        class="category-btn bg-white shadow px-5 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-100 transition font-medium"
+      >
+        <i class="fas fa-shapes mr-2"></i>Luas Permukaan
+      </button>
     </div>
-  </header>
 
-  <!-- Kategori Rumus -->
-  <div class="flex flex-wrap justify-center gap-3 mb-8 mt-6 px-4">
-    <button onclick="filterCategory('all')" id="btn-all" class="category-btn active bg-white shadow px-5 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-100 transition font-medium">
-      <i class="fas fa-layer-group mr-2"></i>Semua
-    </button>
-    <button onclick="filterCategory('keliling')" id="btn-keliling" class="category-btn bg-white shadow px-5 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-100 transition font-medium">
-      <i class="fas fa-ruler-combined mr-2"></i>Keliling
-    </button>
-    <button onclick="filterCategory('luas')" id="btn-luas" class="category-btn bg-white shadow px-5 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-100 transition font-medium">
-      <i class="fas fa-border-all mr-2"></i>Luas
-    </button>
-    <button onclick="filterCategory('volume')" id="btn-volume" class="category-btn bg-white shadow px-5 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-100 transition font-medium">
-      <i class="fas fa-cube mr-2"></i>Volume
-    </button>
-    <button onclick="filterCategory('luas-permukaan')" id="btn-luas-permukaan" class="category-btn bg-white shadow px-5 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-100 transition font-medium">
-      <i class="fas fa-shapes mr-2"></i>Luas Permukaan
-    </button>
-  </div>
+    <!-- Flashcard Section -->
+    <main
+      class="container mx-auto py-5 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 flex-grow"
+    >
+      <!-- Flashcard akan di-render di sini secara dinamis -->
+    </main>
 
-  <!-- Flashcard Section -->
-  <main class="container mx-auto py-5 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 flex-grow">
-    <!-- Flashcard akan di-render di sini secara dinamis -->
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-gradient-to-r from-sky-700 to-blue-600 text-white py-6 mt-10">
-    <div class="container mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-center px-4">
-        <div class="mb-4 md:mb-0">
-          <h2 class="text-xl font-bold flex items-center">
-            <i class="fas fa-calculator mr-2"></i> Maths-Room
-          </h2>
-          <p class="text-sm mt-1 opacity-90">Belajar matematika jadi menyenangkan</p>
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-r from-sky-700 to-blue-600 text-white py-6 mt-10"
+    >
+      <div class="container mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center px-4"
+        >
+          <div class="mb-4 md:mb-0">
+            <h2 class="text-xl font-bold flex items-center">
+              <i class="fas fa-calculator mr-2"></i> Maths-Room
+            </h2>
+            <p class="text-sm mt-1 opacity-90">
+              Belajar matematika jadi menyenangkan
+            </p>
+          </div>
+          <div class="flex gap-4">
+            <a href="#" class="text-white hover:text-sky-200 transition">
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-sky-200 transition">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-sky-200 transition">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+          </div>
         </div>
-        <div class="flex gap-4">
-          <a href="#" class="text-white hover:text-sky-200 transition">
-            <i class="fab fa-facebook text-xl"></i>
-          </a>
-          <a href="#" class="text-white hover:text-sky-200 transition">
-            <i class="fab fa-instagram text-xl"></i>
-          </a>
-          <a href="#" class="text-white hover:text-sky-200 transition">
-            <i class="fab fa-github text-xl"></i>
-          </a>
+        <div
+          class="border-t border-sky-500 mt-4 pt-4 text-center text-sm opacity-80"
+        >
+          &copy; 2025 Maths-Room | Dibuat oleh Chris Jericho Sembiring
         </div>
       </div>
-      <div class="border-t border-sky-500 mt-4 pt-4 text-center text-sm opacity-80">
-        &copy; 2025 Maths-Room | Dibuat oleh Chris Jericho Sembiring
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- JavaScript -->
-  <script src="./assets/index.js"></script>
-</body>
+    <!-- Tombol Scroll to Top -->
+    <button
+      id="scrollToTopBtn"
+      class="scroll-to-top"
+      aria-label="Kembali ke atas"
+    >
+      <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="./assets/index.js"></script>
+  </body>
 </html>
