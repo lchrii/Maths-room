@@ -4,7 +4,7 @@ let flashcardData = [];
 // Fungsi untuk memuat data JSON
 async function loadFlashcardData() {
     try {
-        const response = await fetch('./assets/data.json');
+        const response = await fetch('/assets/data.json');
         const data = await response.json();
         flashcardData = data.flashcardData;
         renderFlashcards();
