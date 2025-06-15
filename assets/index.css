@@ -52,7 +52,7 @@ body {
   background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
 }
 
-/* Tombol Scroll to Top */
+/* Scroll to Top Button */
 .scroll-to-top {
   position: fixed;
   bottom: 30px;
@@ -62,23 +62,26 @@ body {
   border-radius: 50%;
   background-color: #0284c7;
   color: white;
-  display: flex;
+  display: none; /* Awalnya disembunyikan */
   align-items: center;
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
+  border: none;
+  outline: none;
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 .scroll-to-top.visible {
-  opacity: 1;
-  visibility: visible;
+  display: flex; /* Muncul saat class visible ditambahkan */
 }
 
 .scroll-to-top:hover {
   background-color: #0369a1;
   transform: translateY(-3px);
+}
+
+.scroll-to-top i {
+  font-size: 1.25rem;
 }

@@ -149,23 +149,37 @@ function setupScrollToTop() {
     });
 }
 
-// Panggil fungsi ini di initializeApp()
+// Fungsi untuk tombol scroll-to-top
+function initScrollToTop() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // Tampilkan/sembunyikan tombol berdasarkan scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    // Scroll ke atas saat tombol diklik
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Animasi scroll halus
+        });
+    });
+}
+
+// Panggil fungsi di initializeApp()
 async function initializeApp() {
     try {
         await loadFlashcardData();
         renderFlashcards();
         setTimeout(showInfo, 1000);
-        setupScrollToTop(); // Tambahkan ini
+        initScrollToTop(); // Tambahkan ini
     } catch (error) {
         console.error('Error:', error);
         showError(error.message);
     }
 }
-
-scrollToTopBtn.addEventListener('click', () => {
-  gsap.to(window, {
-    scrollTo: 0,
-    duration: 0.8,
-    ease: "power2.inOut"
-  });
-});
