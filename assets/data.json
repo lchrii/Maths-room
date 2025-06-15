@@ -6,7 +6,7 @@
       "name": "Persegi",
       "formula": "L = s × s",
       "description": "s = panjang sisi",
-      "frontImage": "/assets/img/persegi.jpeg"
+      "frontImage": "assets/img/persegi.png"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "name": "Persegi",
       "formula": "K = 4 × s",
       "description": "s = panjang sisi",
-      "frontImage": "/assets/img/persegi.jpeg"
+      "frontImage": "assets/img/persegi.png"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "name": "Persegi Panjang",
       "formula": "L = p × l",
       "description": "p = panjang, l = lebar",
-      "frontImage": "/assets/img/persegi-panjang.jpeg"
+      "frontImage": "assets/img/persegi-panjang.png"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "name": "Persegi Panjang",
       "formula": "K = 2 × (p + l)",
       "description": "p = panjang, l = lebar",
-      "frontImage": "/assets/img/persegi-panjang.jpeg"
+      "frontImage": "assets/img/persegi-panjang.png"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "name": "Segitiga",
       "formula": "L = ½ × a × t",
       "description": "a = alas, t = tinggi",
-      "frontImage": "/assets/img/segitiga.jpeg"
+      "frontImage": "assets/img/segitiga.png"
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "name": "Lingkaran",
       "formula": "L = π × r²",
       "description": "π = 3.14, r = jari-jari",
-      "frontImage": "/assets/img/lingkaran.jpeg"
+      "frontImage": "assets/img/lingkaran.png"
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "name": "Lingkaran",
       "formula": "K = 2 × π × r",
       "description": "π = 3.14, r = jari-jari",
-      "frontImage": "/assets/img/lingkaran.jpeg"
+      "frontImage": "assets/img/lingkaran.png"
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "name": "Kubus",
       "formula": "V = s × s × s",
       "description": "s = panjang sisi",
-      "frontImage": "/assets/img/kubus.jpeg"
+      "frontImage": "assets/img/kubus.png"
     },
     {
       "id": 9,
@@ -70,7 +70,7 @@
       "name": "Kubus",
       "formula": "LP = 6 × s²",
       "description": "s = panjang sisi",
-      "frontImage": "/assets/img/kubus.jpeg"
+      "frontImage": "assets/img/kubus.png"
     },
     {
       "id": 10,
@@ -78,7 +78,7 @@
       "name": "Balok",
       "formula": "V = p × l × t",
       "description": "p = panjang, l = lebar, t = tinggi",
-      "frontImage": "/assets/img/balok.jpeg"
+      "frontImage": "assets/img/balok.png"
     },
     {
       "id": 11,
@@ -86,7 +86,7 @@
       "name": "Balok",
       "formula": "LP = 2 × (p.l + p.t + l.t)",
       "description": "p = panjang, l = lebar, t = tinggi",
-      "frontImage": "/assets/img/balok.jpeg"
+      "frontImage": "assets/img/balok.png"
     },
     {
       "id": 12,
@@ -94,7 +94,7 @@
       "name": "Tabung",
       "formula": "V = π × r² × t",
       "description": "π = 3.14, r = jari-jari, t = tinggi",
-      "frontImage": "/assets/img/tabung.jpeg"
+      "frontImage": "assets/img/tabung.png"
     }
   ]
-}
+} 
