@@ -85,3 +85,24 @@ body {
 .scroll-to-top i {
   font-size: 1.25rem;
 }
+
+/* Tambahkan ini di bagian bawah file CSS Anda */
+main {
+  justify-items: stretch; /* Memastikan item memenuhi lebar sel grid */
+}
+
+.flip-card {
+  width: 100%; /* Memastikan kartu memenuhi lebar sel grid */
+  height: 100%; /* Memastikan tinggi konsisten */
+}
+
+.flip-front,
+.flip-back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Pusatkan horizontal */
+  justify-content: center; /* Pusatkan vertikal */
+  text-align: center; /* Pusatkan teks */
+}
