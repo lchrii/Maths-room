@@ -79,7 +79,7 @@ body {
 
 .scroll-to-top:hover {
   background-color: #0369a1;
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 
 .scroll-to-top i {

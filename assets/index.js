@@ -68,13 +68,13 @@ function renderFlashcards(cards = flashcardData) {
         main.appendChild(cardElement);
     });
 
-    gsap.from("main > .flip-card", {
-        opacity: 0,
-        y: 50,
-        duration: 0.6,
-        stagger: 0.1,
-        delay: 0.2
-    });
+    // gsap.from("main > .flip-card", {
+    //     opacity: 0,
+    //     y: 50,
+    //     duration: 0.6,
+    //     stagger: 0.1,
+    //     delay: 0.2
+    // });
 }
 
 // Fungsi untuk mendapatkan nama kategori
